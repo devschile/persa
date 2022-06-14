@@ -1,0 +1,44 @@
+baseURL = ''
+languageCode = 'es-ES'
+title = 'devsChile(Persa.create(`cachureo`))'
+theme = 'smol'
+
+[params]
+  subtitle = "VENDE y COMPRA BBB"
+  dateFmt = "02.01.2006"
+
+# Header
+[menu]
+  [[menu.main]]
+    identifier = "cachureos"
+    name = "Cachureos"
+    url = "/cachureos/"
+    weight = 1 
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categorías"
+    url = "/categories/"
+    weight = 2 
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Etiquetas"
+    url = "/tags/"
+    weight = 3
+
+# Footer
+  [[menu.footer]]
+    name = "Sitio"
+    url = "https://devschile.cl/"
+    weight = 1 
+
+  [[menu.footer]]
+    name = "Github"
+    url = "https://github.com/devschile/"
+    weight = 2 
+
+  [[menu.footer]]
+    name = "Twitter"
+    url = "https://www.twitter.com/devschile"
+    weight = 3 
