@@ -1,0 +1,52 @@
+:root {
+  --global-font-size: 16px;
+  --global-line-height: 1.4em;
+  --global-space: 12px;
+  --font-stack: 'IBM Plex Mono', Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+    serif;
+  --mono-font-stack: 'Menlo', Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+    serif;
+  --background-color: #111;
+  --page-width: 60em;
+  --font-color: #e8e9ed;
+  --invert-font-color: #222;
+  --secondary-color: #a3abba;
+  --tertiary-color: #a3abba;
+  --primary-color: #5ce6cd;
+  --error-color: #ff3c74;
+  --progress-bar-background: #3f3f44;
+  --progress-bar-fill: #62c4ff;
+  --code-bg-color: #3f3f44;
+  --input-style: solid;
+  --display-h1-decoration: none;
+}
+
+body {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 var(--global-space);
+}
+
+article {
+  padding: 24px 0;
+}
+
+.center {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure {
+  margin: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
