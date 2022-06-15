@@ -1,13 +1,20 @@
 <article>
 	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-	<b><time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time></b>
-	{{ range .Params.tags }}
-	<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-	{{ end }}
-	<div>
+	<p class="subtitle">🗓 <time>{{ .Date.Format (default "02-01-2006" .Site.Params.dateFmt) }}</time></p>
+	<p class="subtitle">🏷 
+		{{ with .Params.tags }}
+    <i class="icon-tags" aria-hidden="true"></i>
+    {{ range $i, $e := . }}
+      {{ if $i }} &bull; {{ end }}
+				<a href="{{ "tags/" | absURL }}{{ $e | urlize }}" rel="tag">{{ $e }}</a>
+			{{ end }}
+  	{{ end }}
+		<br><br>
+	</p>
+	<div class="content">
 		{{ .Summary }}
 		{{ if .Truncated }}
-			<a href="{{ .Permalink }}">Read more...</a>
+			<a href="{{ .Permalink }}" class="readmore">Leer más...</a>
 		{{ end }}
 	</div>
 </article>

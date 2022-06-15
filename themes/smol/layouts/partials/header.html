@@ -1,16 +1,18 @@
-<header>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}<br>
-	== <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> ==<br>
-	{{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}
-	<div style="float: right;">{{ .Site.Params.subtitle }}</div><br>
-	<p>
-	<nav>
-			<a href="/"><b>Start</b></a>.
+<header class="terminal-nav">
+	<div class="terminal-logo">
+		<div class="logo terminal-prompt">
+			<a href="{{ .Site.BaseURL }}" class="no-style">{{ .Site.Title }}</a>
+		</div>
+	</div>
+	<nav class="terminal-menu">
+		<ul>
 			{{ with .Site.Menus.main }}
 			{{ range . }}
-			<a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>.
+			<li><a href="{{ .URL | relURL }}" class="menu-item">{{ .Name }}</a> //</li>
 			{{ end }}
+		</ul>
 	</nav>
-	</p>
 	{{ end }}
 </header>
+<p class="subtitle">{{ .Site.Params.subtitle }}</p>
+<hr>

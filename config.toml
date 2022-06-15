@@ -1,6 +1,6 @@
 baseURL = ''
 languageCode = 'es-ES'
-title = 'devsChile(Persa.create(`cachureo`))'
+title = 'DevsChile.create(`Persa`)'
 theme = 'smol'
 
 [params]

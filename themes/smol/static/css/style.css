@@ -50,3 +50,21 @@ img {
   height: auto;
   margin: auto;
 }
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+}
+
+h1 {
+  padding-top: 0;
+}
+
+.terminal-menu li {
+  margin-right: 10px;
+}
+
+.terminal-menu li a.menu-item {
+  margin-right: 10px;
+  text-decoration: underline;
+}
