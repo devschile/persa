@@ -2,15 +2,72 @@
 	<main>
 		<article>
 			<h1>{{ .Title }}</h1>
-			<b><time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time></b>
-		       {{ range .Params.tags }}
-		           <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-        	       {{ end }}
+			<p class="subtitle">🗓 <time>{{ .Date.Format (default "02-01-2006" .Site.Params.dateFmt) }}</time></p>
+			<p class="subtitle">🏷 
+				{{ with .Params.tags }}
+				{{ range $i, $e := . }}
+					{{ if $i }} &bull; {{ end }}
+						<a href="{{ "tags/" | absURL }}{{ $e | urlize }}" rel="tag">{{ $e }}</a>
+					{{ end }}
+				{{ end }}
+			</p>
+			<p class="subtitle">📷 {{ len .Params.fotos }}</p>
+			<br>
 
-			<div>
+			<table>
+				<tr>
+					<th colspan="2">Detalles</th>
+				</tr>
+				{{ if .Params.contacto }}
+				<tr>
+					<td>Quién:</td>
+					<td>{{ .Params.contacto.nombre }}
+						{{ if .Params.contacto.slack }}<br> _<sub>slack:</sub> <small>{{ .Params.contacto.slack }}</small>{{ end }}
+						{{ if .Params.contacto.email }}<br> _<sub>email:</sub> <small>{{ .Params.contacto.email }}</small>{{ end }}
+						{{ if .Params.contacto.celular }}<br> _<sub>celu:</sub> <small>{{ .Params.contacto.celular }}</small>{{ end }}
+					</td>
+				</tr>
+				{{ end }}
+				{{ if .Params.lugar }}
+				<tr>
+					<td>Lugar:</td>
+					<td>{{ .Params.lugar }}</td>
+				</tr>
+				{{ end }}
+				{{ if .Params.precio }}
+				<tr>
+					<td>Precio:</td>
+					<td>{{ .Params.precio }}</td>
+				</tr>
+				{{ end }}
+				{{ if .Params.negociable }}
+				<tr>
+					<td>Negociable:</td>
+					<td>{{ .Params.negociable }}</td>
+				</tr>
+				{{ end }}
+				{{ if .Params.lugar }}
+				<tr>
+					<td>Lugar:</td>
+					<td>{{ .Params.lugar }}</td>
+				</tr>
+				{{ end }}
+			</table>
+
+			<div class="content">
 				{{ .Content }}
 			</div>
+
+			{{ if .Params.fotos }}
+			<table>
+				<tr>
+					<th>Fotos</th>
+				</tr>
+				{{ range .Params.fotos }}
+				<tr><td><img src="{{ . }}"></td></tr>
+				{{ end }}
+			</table>
+			{{ end }}
 		</article>
 	</main>
-{{ partial "sidebar.html" . }}
 {{ end }}

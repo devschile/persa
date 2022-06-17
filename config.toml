@@ -1,11 +1,12 @@
-baseURL = ''
-languageCode = 'es-ES'
-title = 'DevsChile.create(`Persa`)'
-theme = 'smol'
+baseURL = ""
+languageCode = "es-ES"
+title = "DevsChile.create('Persa')"
+theme = "smol"
 
 [params]
-  subtitle = "VENDE y COMPRA BBB"
+  subtitle = "VENDE y COMPRA dentro de la comunidad."
   dateFmt = "02.01.2006"
+  truncated = 50
 
 # Header
 [menu]

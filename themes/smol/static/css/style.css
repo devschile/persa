@@ -61,10 +61,16 @@ h1 {
 }
 
 .terminal-menu li {
+  margin-left: 10px;
   margin-right: 10px;
 }
 
 .terminal-menu li a.menu-item {
-  margin-right: 10px;
+  margin-left: 10px;
   text-decoration: underline;
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
 }

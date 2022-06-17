@@ -7,12 +7,13 @@
 	<nav class="terminal-menu">
 		<ul>
 			{{ with .Site.Menus.main }}
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}" class="menu-item">{{ .Name }}</a> //</li>
+			{{ range $i, $e := . }}
+				{{ if $i }} // {{ end }}
+				<li><a href="{{ .URL | relURL }}" class="menu-item">{{ .Name }}</a></li>
+				{{ end }}
 			{{ end }}
 		</ul>
 	</nav>
-	{{ end }}
 </header>
 <p class="subtitle">{{ .Site.Params.subtitle }}</p>
 <hr>

@@ -1,20 +1,21 @@
 <article>
 	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-	<p class="subtitle">🗓 <time>{{ .Date.Format (default "02-01-2006" .Site.Params.dateFmt) }}</time></p>
-	<p class="subtitle">🏷 
-		{{ with .Params.tags }}
-    <i class="icon-tags" aria-hidden="true"></i>
-    {{ range $i, $e := . }}
-      {{ if $i }} &bull; {{ end }}
-				<a href="{{ "tags/" | absURL }}{{ $e | urlize }}" rel="tag">{{ $e }}</a>
-			{{ end }}
-  	{{ end }}
-		<br><br>
-	</p>
+	<table>
+		<tr>
+			<td>🗓 <small><time>{{ .Date.Format (default "02-01-2006" .Site.Params.dateFmt) }}</time></small></td>
+			<td>🏷 <small>
+				{{ with .Params.tags }}
+				{{ range $i, $e := . }}
+					{{ if $i }} &bull; {{ end }}
+						<a href="{{ "tags/" | absURL }}{{ $e | urlize }}" rel="tag">{{ $e }}</a>
+					{{ end }}
+				{{ end }}
+			</small></td>
+			<td>📷 <small>{{ len .Params.fotos }}</small></td>
+		</tr>
+	</table>
 	<div class="content">
-		{{ .Summary }}
-		{{ if .Truncated }}
-			<a href="{{ .Permalink }}" class="readmore">Leer más...</a>
-		{{ end }}
+		{{ .Summary | truncate 200 }}
+		<a href="{{ .Permalink }}" class="readmore">Leer más...</a>
 	</div>
 </article>
