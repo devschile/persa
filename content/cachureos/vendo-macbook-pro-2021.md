@@ -7,7 +7,7 @@ vigente = true                        # requerido
 lugar = "Región Metropolitana"
 tags = ["macbook pro", "usado"]
 categories = "Vendo"                  # requerido
-fotos = ["https://i.imgur.com/fxW0UyS.jpg"]
+fotos = ["https://i.imgur.com/fxW0UyS.jpg", "https://i.imgur.com/a2itCCE.jpg"]
 
 [contacto]                            # requerido
   slack = "@jorgeepunan"              # requerido

@@ -4,22 +4,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<style type=text/css>body{font-family:monospace;}</style>
-	<title>{{ .Title }}</title>
-	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	{{ partial "social" . }}
+
+	<link rel="icon" type="image/png" href="/favicon.png">
 	<link href="https://fonts.cdnfonts.com/css/ibm-plex-mono" rel="stylesheet">
 	<link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" />
 	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 	{{ range .Site.Params.customCSS -}}
-		<link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
+	<link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
 	{{- end }}
 	{{ with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 </head>
 <body>
+
+{{ with .Params.fotos }}
+  {{ $len := len . }}
+  {{ if eq $len 1 }}
+		<!-- a-{{ . }}
+    aa-{{ index . 0 }} -->
+  {{ else }}
+		<!-- b-{{ . }} -->
+    {{ $last := sub $len 1 }}
+    {{ range first $last . }}
+			<!-- c-{{ . }}
+      cc-{{ . }}, -->
+    {{ end }}
+		<!-- d-{{ . }} -->
+    dd-{{ index . $last }}
+  {{ end }}
+{{ end }}
+<hr>
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
