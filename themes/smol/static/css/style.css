@@ -18,7 +18,9 @@
   --error-color: #ff3c74;
   --progress-bar-background: #3f3f44;
   --progress-bar-fill: #62c4ff;
-  --code-bg-color: #3f3f44;
+  --code-color: lightgreen;
+  --code-bg-color: transparent;
+  --code-border-color: #3e4a3e;
   --input-style: solid;
   --display-h1-decoration: none;
 }
@@ -73,4 +75,15 @@ h1 {
 .icon {
   display: inline-block;
   width: 16px;
+}
+
+pre {
+  color: var(--code-color);
+  border-color: var(--code-border-color);
+}
+
+pre code {
+  line-height: 24px;
+  background-size: 10px 24px;
+  background-image: repeating-linear-gradient(0deg, var(--code-border-color), var(--code-border-color) 1px, transparent 1px, transparent);
 }

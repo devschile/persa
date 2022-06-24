@@ -8,10 +8,10 @@
 <meta property ="twitter:url" content ="https://persaevschile.cl/"/>
 <meta property ="twitter:title" content ="Persa DevsChile"/>
 <meta property ="twitter:description" content ="VENDE y COMPRA dentro de la comunidad. De todo y lo mejor en un sólo lugar."/>
-{{ if .Params.fotos }}{{ with .Params.fotos }}{{ $len := len . }}{{ if eq $len 1 }}{{ else }}{{ $last := sub $len 1 }}
+{{ if .Params.fotos }}{{ with .Params.fotos }}{{ $len := len . }}{{ $last := sub $len 1 }}
 <meta property ="og:image" content ="{{ index . $last }}"/>
 <meta property ="twitter:image" content ="{{ index . $last }}"/>
-{{ end }}{{ end }}{{ else }}
+{{ end }}{{ else }}
 <meta property ="og:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1655514632/zq6khuqovqwhrdnpickh.jpg"/>
 <meta property ="twitter:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1655514632/zq6khuqovqwhrdnpickh.jpg"/>
 {{ end }}

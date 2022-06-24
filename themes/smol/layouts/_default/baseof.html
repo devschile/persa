@@ -19,24 +19,6 @@
 	{{- end }}
 </head>
 <body>
-
-{{ with .Params.fotos }}
-  {{ $len := len . }}
-  {{ if eq $len 1 }}
-		<!-- a-{{ . }}
-    aa-{{ index . 0 }} -->
-  {{ else }}
-		<!-- b-{{ . }} -->
-    {{ $last := sub $len 1 }}
-    {{ range first $last . }}
-			<!-- c-{{ . }}
-      cc-{{ . }}, -->
-    {{ end }}
-		<!-- d-{{ . }} -->
-    dd-{{ index . $last }}
-  {{ end }}
-{{ end }}
-<hr>
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}

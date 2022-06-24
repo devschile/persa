@@ -1,25 +1,25 @@
 +++
 date = 2022-06-16T10:00:00Z           # requerido
 title = "Vendo Macbook Pro 2012"      # requerido
-precio = "CLP$200.000"                # requerido
-negociable = true
+precio = "CLP$202.202"                # requerido
+negociable = false
 vigente = true                        # requerido
 lugar = "Región Metropolitana"
 tags = ["macbook pro", "usado"]
 categories = "Vendo"                  # requerido
-fotos = ["https://i.imgur.com/fxW0UyS.jpg", "https://i.imgur.com/a2itCCE.jpg"]
+fotos = ["https://i.imgur.com/PqOlyL2.jpg", "https://i.imgur.com/eowbuYa.jpg", "https://i.imgur.com/y44diQr.jpg", "https://i.imgur.com/YDipNIi.jpg"]
 
 [contacto]                            # requerido
   slack = "@jorgeepunan"              # requerido
   nombre = "Jorge Epuñan"
-  email = "huemul@devschile.cl"
-  celular = "+56 9 01010101"
+  email = "jorgelehc@gmail.com"
+  celular = ""
 +++
 <!-- DESCRIPCION COMPLETA -->
 
 Vendo hermoso Macbook Pro año 2012 13", siempre con carcaza así que está bien cuidado y limpio (sin stickers pegados).
 
-Pantalla sin pixeles quemados. En caja original, batería X ciclos, cargador.
+Pantalla sin pixeles quemados, 8 GB ram, 512 GB HD SSD. En caja original, cargador.
 
 Con este equipo abrimos el slack de devschile, hice el sitio, y varios proyectos así de exitosos.
 
