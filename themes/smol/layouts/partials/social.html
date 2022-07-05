@@ -1,13 +1,19 @@
-<meta name ="title" content ="Persa DevsChile"/>
+<title>{{ .Title }} | Persa DevsChile"</title>
+<meta property ="og:title" content ="{{ .Title }} | Persa DevsChile"/>
+<meta property ="twitter:title" content ="{{ .Title }} | Persa DevsChile"/>
+{{ if .Summary }}
+<meta name="description" content="{{ .Summary }}">
+<meta property ="og:description" content ="{{ .Summary }}"/>
+<meta property ="twitter:description" content ="{{ .Summary }}"/>
+{{ else }}
 <meta name ="description" content ="VENDE y COMPRA dentro de la comunidad. De todo y lo mejor en un sólo lugar."/>
+<meta property ="og:description" content ="VENDE y COMPRA dentro de la comunidad. De todo y lo mejor en un sólo lugar."/>
+<meta property ="twitter:description" content ="VENDE y COMPRA dentro de la comunidad. De todo y lo mejor en un sólo lugar."/>
+{{ end }}
 <meta property ="og:type" content ="website"/>
 <meta property ="og:url" content ="https://persa.devschile.cl/"/>
-<meta property ="og:title" content ="Persa DevsChile"/>
-<meta property ="og:description" content ="VENDE y COMPRA dentro de la comunidad. De todo y lo mejor en un sólo lugar."/>
 <meta property ="twitter:card" content ="summary_large_image"/>
 <meta property ="twitter:url" content ="https://persaevschile.cl/"/>
-<meta property ="twitter:title" content ="Persa DevsChile"/>
-<meta property ="twitter:description" content ="VENDE y COMPRA dentro de la comunidad. De todo y lo mejor en un sólo lugar."/>
 {{ if .Params.fotos }}{{ with .Params.fotos }}{{ $len := len . }}{{ $last := sub $len 1 }}
 <meta property ="og:image" content ="{{ index . $last }}"/>
 <meta property ="twitter:image" content ="{{ index . $last }}"/>
