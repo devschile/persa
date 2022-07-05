@@ -1,5 +1,5 @@
 +++
-date = 2022-07-06T00:00:00Z           # requerido
+date = 2022-07-05T00:00:00Z           # requerido
 title = "Router Ubiquiti Unifi Security Gateway Pro"      # requerido
 precio = "CLP$250.000"                # requerido
 negociable = false
