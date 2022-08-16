@@ -3,7 +3,7 @@ date = 2022-06-16T10:00:00Z           # requerido
 title = "Vendo Macbook Pro 2012"      # requerido
 precio = "CLP$202.202"                # requerido
 negociable = false
-vigente = true                        # requerido
+vigente = false                        # requerido
 lugar = "Región Metropolitana"
 tags = ["macbook pro", "usado"]
 categories = "Vendo"                  # requerido
@@ -25,6 +25,6 @@ Con este equipo abrimos el slack de devschile, hice el sitio, y varios proyectos
 
 Entrega a acordar.
 
-> ¡PRECIO NO PUEDE SER MÁS BARATO!
+> ¡PRECIO ES DEMASIADO BARATO!
 
 Más detalles: [MacBook Pro (13 pulgadas, mid. 2012) - Especificaciones técnicas](https://support.apple.com/kb/sp649?locale=es_CL)

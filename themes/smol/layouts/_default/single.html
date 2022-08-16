@@ -12,6 +12,7 @@
 				{{ end }}
 			</p>
 			<p class="subtitle">📷 {{ len .Params.fotos }}</p>
+			{{ if not .Params.vigente }}<p class="subtitle">💰 <b>VENDIDO</b></p>{{ end }}
 			<br>
 
 			<table>

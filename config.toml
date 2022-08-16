@@ -10,12 +10,6 @@ theme = "smol"
 
 # Header
 [menu]
-  # [[menu.main]]
-  #   identifier = "cachureos"
-  #   name = "Cachureos"
-  #   url = "/cachureos/"
-  #   weight = 1 
-
   [[menu.main]]
     identifier = "categories"
     name = "Categorías"
@@ -30,7 +24,7 @@ theme = "smol"
 
   [[menu.main]]
     identifier = "como-publicar"
-    name = "¿Kómo publiko?"
+    name = "¿Cómo publico?"
     url = "/como-publicar/"
     weight = 3
 
